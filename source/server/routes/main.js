@@ -4,8 +4,8 @@ import { match } from 'react-router';
 import renderLayout from '../render-layout';
 import render from '../render';
 import settings from '../settings';
-import configureStore from '../../configure-store';
-import createRoutes from '../../routes';
+import configureStore from '../../shared/configure-store';
+import createRoutes from '../../shared/routes';
 
 const store = configureStore();
 const routes = createRoutes();
