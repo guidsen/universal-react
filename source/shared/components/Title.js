@@ -1,3 +1,9 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-export default (props) => <h1 {...props }>{ props.title }</h1>;
+const Title = (props) => <h1 {...props}>{props.title}</h1>;
+
+Title.propTypes = {
+  title: PropTypes.string.isRequired,
+};
+
+export default Title;

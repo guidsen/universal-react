@@ -1,6 +1,6 @@
 import path from 'path';
 import express from 'express';
-import settings from './server/settings';
+import settings from './settings';
 
 import mainRoute from './routes/main';
 

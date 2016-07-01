@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import settings from './settings';
 import app from './app';
 
@@ -10,5 +11,5 @@ app.listen(port, (err) => {
     return;
   }
 
-  console.log(`Listening at http://${ host }:${ port }`);
+  console.log(`Listening at http://${host}:${port}`);
 });

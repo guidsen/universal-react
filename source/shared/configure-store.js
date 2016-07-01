@@ -6,13 +6,11 @@ import reducers from './reducers';
 
 const logger = createLogger();
 const rootReducer = combineReducers(Object.assign({}, reducers, {
-  routing: routerReducer
+  routing: routerReducer,
 }));
 
-const configureStore = (initialState = {}, extraMiddlewares = []) => {
-  return compose(
-    applyMiddleware(thunkMiddleware, logger, ...extraMiddlewares)
-  )(createStore)(rootReducer, initialState);
-};
+const configureStore = (initialState = {}, extraMiddlewares = []) => compose(
+  applyMiddleware(thunkMiddleware, logger, ...extraMiddlewares)
+)(createStore)(rootReducer, initialState);
 
 export default configureStore;
